@@ -5,14 +5,7 @@ from flask import *
 
 config = { #config to connect app with firebase
 
- 'apiKey': "AIzaSyAJGyOccVxQOoWGZvEdhU0vS_WtVBraN5E",
-  'authDomain': "user-management-ad70b.firebaseapp.com",
-  'databaseURL': "https://user-management-ad70b-default-rtdb.asia-southeast1.firebasedatabase.app",
-  'projectId': "user-management-ad70b",
-  'storageBucket': "user-management-ad70b.appspot.com",
-  'messagingSenderId': "198158431364",
-  'appId': "1:198158431364:web:0836c63b5f259a0b3b7ed1",
-  'measurementId': "G-GK0B42QGS5"
+#add ur config here as per registered web app on firebase
 	
 }
 
@@ -28,7 +21,7 @@ def email(): #manages smtp requests to send email with 16bit token
 	s = smtplib.SMTP('smtp.gmail.com',587) #sends request to gmail server 
 	s.ehlo() #to ensure that server supports 
 	s.starttls() #request for tls encryption to email with security
-	s.login("techsnet111@gmail.com","salaryorshare?") #creds for our email
+	s.login("","") #creds for our email 1st is for email and 2nd is for password
 	msg = request.form["msg"] #msg you want to share along with token
 	msg = msg  +" \n your 16 bit authentication code is :\n" + str(temp) #concating token wit msg
 	s.sendmail("techsnet111@gmail.com",Target,msg) #sends email to target
