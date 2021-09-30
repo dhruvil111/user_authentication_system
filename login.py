@@ -4,14 +4,7 @@ from flask import *
 
 config = { #config files to connect with firebase
 	
-	'apiKey': "AIzaSyAJGyOccVxQOoWGZvEdhU0vS_WtVBraN5E",
-  'authDomain': "user-management-ad70b.firebaseapp.com",
-  'databaseURL': "https://user-management-ad70b-default-rtdb.asia-southeast1.firebasedatabase.app",
-  'projectId': "user-management-ad70b",
-  'storageBucket': "user-management-ad70b.appspot.com",
-  'messagingSenderId': "198158431364",
-  'appId': "1:198158431364:web:1280b0153fa7af013b7ed1",
-  'measurementId': "G-3S5Z9XKZGQ"
+	#add your firebase config of app registered on firebase here
 }
 
 fb = pyrebase.initialize_app(config) #initializing database
