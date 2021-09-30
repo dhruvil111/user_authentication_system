@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>Login Form</title>
+		<link rel ="stylesheet" href="{{ url_for('static',filename='styles/style.css')}}">
+	</head>
+
+	<body>
+		
+		<div class="a">
+			<div class="form">
+				<div class="button-box">
+					<div id="button"></div>
+
+					<button type="button" class="toggle" onclick="login()"  >Login</button>
+					<button type="button" class="toggle" onclick="register()" >Register</button>
+					
+				</div>
+
+				<form class="input_groups" id="login" action="." method="POST">
+
+				
+					<input type="hidden" name="cb" value="uncheck">
+					<input type="text" class="input_fields" placeholder="username" required name="lusername" >
+					<input type="password" class="input_fields" placeholder="password" required name="lpassword" >
+					<button type="submit" class="submit" name="btn" value="ll">Login</button>
+
+				</form>
+
+				<form class="input_groups" id="register" action="." method="POST">
+
+					<input type="email" class="input_fields" placeholder="Email" required name="remail">
+					<input type="text" class="input_fields" placeholder="username" required name="rusername">
+					<input type="password" class="input_fields" placeholder="password" required name="rpassword">
+					<input type="text" class="input_fields" placeholder="token" name="rtoken">
+					<input type="checkbox" class="checkbox" name="cb" value="check"> <span>Lecturer's Registration</span>
+					<input type="hidden" name="cb" value="uncheck">
+					<button type="submit" class="submit" name="btn" value="rr" >Register</button>
+
+				</form>
+				
+			</div>
+			
+		</div>
+
+		<script type="text/javascript">
+
+			var x = document.getElementById("login");
+			var y = document.getElementById("register");
+			var z = document.getElementById("button");
+
+			function register(){
+
+				x.style.left = "-400px";
+				y.style.left = "50px";
+				z.style.left = "110px";
+			}
+			function login(){
+
+				x.style.left = "50px";
+				y.style.left = "450px";
+				z.style.left = "0px";
+			}
+
+
+		</script>
+
+
+	</body>
+</html>
